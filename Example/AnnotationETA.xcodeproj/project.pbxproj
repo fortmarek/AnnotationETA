@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		A78DA16B647057878F2ACD21 /* Pods_AnnotationETA_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6E3A28D09A7E19103A8C6B /* Pods_AnnotationETA_Example.framework */; };
+		F89C98401E4287FE0055078B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89C983F1E4287FE0055078B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		6604A3FE38E59BD244AB9357 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A335813E707027E15CA00668 /* Pods-AnnotationETA_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationETA_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationETA_Example/Pods-AnnotationETA_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C462F967F44449C0A3AB96E2 /* Pods-AnnotationETA_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationETA_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationETA_Tests/Pods-AnnotationETA_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F89C983F1E4287FE0055078B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F97F83DFB984629471875EF5 /* Pods-AnnotationETA_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationETA_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationETA_Example/Pods-AnnotationETA_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F89C98401E4287FE0055078B /* MapKit.framework in Frameworks */,
 				A78DA16B647057878F2ACD21 /* Pods_AnnotationETA_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +75,7 @@
 		1C84CD62AA9C37B584685D10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F89C983F1E4287FE0055078B /* MapKit.framework */,
 				1D6E3A28D09A7E19103A8C6B /* Pods_AnnotationETA_Example.framework */,
 				4F27F2F5BFB798A02C6BD2BD /* Pods_AnnotationETA_Tests.framework */,
 			);
