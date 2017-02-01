@@ -1,0 +1,16 @@
+PODS:
+  - AnnotationETA (0.1.0)
+
+DEPENDENCIES:
+  - AnnotationETA (from `../`)
+
+EXTERNAL SOURCES:
+  AnnotationETA:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AnnotationETA: ffa8db1beee40e593f544808f02deca078a0284d
+
+PODFILE CHECKSUM: 0dae11ac84c77d3c6b4af54c04d0460f00fa5c16
+
+COCOAPODS: 1.2.0.beta.1

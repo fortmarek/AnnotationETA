@@ -1,0 +1,22 @@
+{
+  "name": "AnnotationETA",
+  "version": "0.1.0",
+  "summary": "A short description of AnnotationETA.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/fortmarek/AnnotationETA",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "fortmarek": "marekfort@me.com"
+  },
+  "source": {
+    "git": "https://github.com/fortmarek/AnnotationETA.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AnnotationETA/Classes/**/*"
+}
