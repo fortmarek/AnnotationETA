@@ -9,8 +9,9 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,7 +22,10 @@ class ViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-//        mapView.showsUserLocation = true
+        mapView.showsUserLocation = true
+        
+        locationManager.delegate = self
+        mapView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {

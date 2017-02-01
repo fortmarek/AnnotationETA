@@ -34,6 +34,9 @@
                             <constraint firstItem="rrb-8E-Zop" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="uzt-mR-1bC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="rrb-8E-Zop" id="4Qk-7m-4Fb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
