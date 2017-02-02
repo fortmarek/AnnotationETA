@@ -49,7 +49,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             annotationView = reusableAnnotationView
         }
         else {
-            let annotationEtaView = AnnotationEtaView(annotation: annotation, reuseIdentifier: "KK")
+            let annotationEtaView = AnnotationEtaView(annotation: annotation, reuseIdentifier: "annotationEta")
         }
         
         

@@ -17,6 +17,7 @@
 		C6AA5E91D155557CF6B7FAD8307CFCFD /* Pods-AnnotationETA_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E8C6B3CE81D070C49B7F34F395265D /* Pods-AnnotationETA_Tests-dummy.m */; };
 		DCB2A09930A88C06E664C6DE69FDC1A9 /* Pods-AnnotationETA_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D48CFFBF2D5EEF055A3906B1CAB63E /* Pods-AnnotationETA_Example-dummy.m */; };
 		F883014D1E42A0FF001F6C61 /* AnnotationETAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883014C1E42A0FF001F6C61 /* AnnotationETAView.swift */; };
+		F88A847D1E43823C00C6D763 /* AnnotationEta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A847C1E43823C00C6D763 /* AnnotationEta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		EF68FAD1DC7C60C3176862D79716C20F /* Pods-AnnotationETA_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnnotationETA_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F649CB49469B003B252C1A28086600A4 /* Pods-AnnotationETA_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnnotationETA_Example-umbrella.h"; sourceTree = "<group>"; };
 		F883014C1E42A0FF001F6C61 /* AnnotationETAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationETAView.swift; sourceTree = "<group>"; };
+		F88A847C1E43823C00C6D763 /* AnnotationEta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationEta.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				F883014C1E42A0FF001F6C61 /* AnnotationETAView.swift */,
+				F88A847C1E43823C00C6D763 /* AnnotationEta.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			files = (
 				F883014D1E42A0FF001F6C61 /* AnnotationETAView.swift in Sources */,
 				5947BBF9766943B43F649FA400BCBE72 /* AnnotationETA-dummy.m in Sources */,
+				F88A847D1E43823C00C6D763 /* AnnotationEta.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
