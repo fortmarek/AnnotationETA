@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0C887E118FEB010B2976F8ACD2AC1570 /* Pods-AnnotationETA_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF68FAD1DC7C60C3176862D79716C20F /* Pods-AnnotationETA_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5947BBF9766943B43F649FA400BCBE72 /* AnnotationETA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E79C6E05DA787A9827133F5B6300A /* AnnotationETA-dummy.m */; };
-		6385663AC8842A44B560F30824E85E17 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF6238EA82D9FE9277D76C7F78C756 /* ReplaceMe.swift */; };
 		64930F1280B7645C670B665914C9D7EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		7E1551807624E61A7D15D5E994F95F8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		80E31A4E43DA4822CC581E154739FA22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
@@ -17,6 +16,7 @@
 		A74ECE5EDF5400EBD3A195672E6179AF /* AnnotationETA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1392EC150A61AEBA533C8E5D413FBDF5 /* AnnotationETA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6AA5E91D155557CF6B7FAD8307CFCFD /* Pods-AnnotationETA_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E8C6B3CE81D070C49B7F34F395265D /* Pods-AnnotationETA_Tests-dummy.m */; };
 		DCB2A09930A88C06E664C6DE69FDC1A9 /* Pods-AnnotationETA_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D48CFFBF2D5EEF055A3906B1CAB63E /* Pods-AnnotationETA_Example-dummy.m */; };
+		F883014D1E42A0FF001F6C61 /* AnnotationETAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883014C1E42A0FF001F6C61 /* AnnotationETAView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,6 @@
 		0BDACA07F1BAD7B1725A29A6D839A55D /* Pods_AnnotationETA_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnnotationETA_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8E79C6E05DA787A9827133F5B6300A /* AnnotationETA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnnotationETA-dummy.m"; sourceTree = "<group>"; };
 		1392EC150A61AEBA533C8E5D413FBDF5 /* AnnotationETA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnnotationETA-umbrella.h"; sourceTree = "<group>"; };
-		20DF6238EA82D9FE9277D76C7F78C756 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		2A64DEFAAC9800EFE8ACC197B445AFC0 /* Pods-AnnotationETA_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnnotationETA_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		32127AFA30F144F9AA464A9813D71F8D /* Pods-AnnotationETA_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnnotationETA_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		47D48CFFBF2D5EEF055A3906B1CAB63E /* Pods-AnnotationETA_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnnotationETA_Example-dummy.m"; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		EE0B075ADF82366408A31F76214BDBFD /* Pods-AnnotationETA_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnnotationETA_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EF68FAD1DC7C60C3176862D79716C20F /* Pods-AnnotationETA_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnnotationETA_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F649CB49469B003B252C1A28086600A4 /* Pods-AnnotationETA_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnnotationETA_Example-umbrella.h"; sourceTree = "<group>"; };
+		F883014C1E42A0FF001F6C61 /* AnnotationETAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationETAView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,11 +118,12 @@
 			path = "Target Support Files/Pods-AnnotationETA_Tests";
 			sourceTree = "<group>";
 		};
-		53832E4062E122000CA05D92200FC4E5 /* AnnotationETA */ = {
+		53832E4062E122000CA05D92200FC4E5 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
 				858CC43ED1D20E2E5570A99FCCA59F74 /* Classes */,
 			);
+			name = Pod;
 			path = AnnotationETA;
 			sourceTree = "<group>";
 		};
@@ -148,7 +149,7 @@
 		858CC43ED1D20E2E5570A99FCCA59F74 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				20DF6238EA82D9FE9277D76C7F78C756 /* ReplaceMe.swift */,
+				F883014C1E42A0FF001F6C61 /* AnnotationETAView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -205,7 +206,7 @@
 		F86FA220942883D866B19503F6C247B3 /* AnnotationETA */ = {
 			isa = PBXGroup;
 			children = (
-				53832E4062E122000CA05D92200FC4E5 /* AnnotationETA */,
+				53832E4062E122000CA05D92200FC4E5 /* Pod */,
 				921CAE68D7152A259ED7B44838C8FE55 /* Support Files */,
 			);
 			name = AnnotationETA;
@@ -353,8 +354,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F883014D1E42A0FF001F6C61 /* AnnotationETAView.swift in Sources */,
 				5947BBF9766943B43F649FA400BCBE72 /* AnnotationETA-dummy.m in Sources */,
-				6385663AC8842A44B560F30824E85E17 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
