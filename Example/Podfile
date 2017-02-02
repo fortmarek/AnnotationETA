@@ -3,9 +3,7 @@ use_frameworks!
 target 'AnnotationETA_Example' do
   pod 'AnnotationETA', :path => '../'
 
-  target 'AnnotationETA_Tests' do
-    inherit! :search_paths
-
+target 'AnnotationETA_Tests' do
+    pod 'AnnotationETA', :path => '../'
     
-  end
 end

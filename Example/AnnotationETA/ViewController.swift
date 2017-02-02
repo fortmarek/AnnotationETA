@@ -28,7 +28,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
         locationManager.delegate = self
         mapView.delegate = self
-
+        
+        
     }
     
 
@@ -37,5 +38,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // Dispose of any resources that can be recreated.
     }
 
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotationEta = annotation as? AnnotationEtaView else {return nil}
+        return annotationEta
+    }
 }
 

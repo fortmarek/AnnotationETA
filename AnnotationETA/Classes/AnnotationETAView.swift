@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class AnnotationEtaView: MKAnnotationView {
+open class AnnotationEtaView: MKAnnotationView {
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         
@@ -19,7 +19,7 @@ class AnnotationEtaView: MKAnnotationView {
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
