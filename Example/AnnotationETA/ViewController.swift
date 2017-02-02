@@ -35,8 +35,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 //            x += 1
 //        }
         
-        print(views)
-        
         locationManager.requestWhenInUseAuthorization()
         
         //Show user location with necessary updates
@@ -48,6 +46,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         //Delegates for location manager and map view
         locationManager.delegate = self
         mapView.delegate = self
+        
+        
+        DispatchQueue.main.async(execute: {
+            //Placing toilets on the map
+            self.mapView.addAnnotations(self.etaAnnotations)
+        })
         
         
     }
@@ -68,6 +72,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
         else {
             let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotation")
+            annotationView = annotationEtaView
         }
         
         
