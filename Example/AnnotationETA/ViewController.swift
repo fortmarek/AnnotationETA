@@ -21,11 +21,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         locationManager.requestWhenInUseAuthorization()
         
+        //Show user location with necessary updates
         mapView.showsUserLocation = true
         locationManager.startUpdatingLocation()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
-
+        
+        //Delegates for location manager and map view
         locationManager.delegate = self
         mapView.delegate = self
         
@@ -40,8 +42,19 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let annotationEta = annotation as? AnnotationEtaView else {return nil}
-        return annotationEta
+        
+        var annotationView = MKAnnotationView()
+        
+        if let reusableAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotationEta") {
+            annotationView = reusableAnnotationView
+        }
+        else {
+            let annotationEtaView = AnnotationEtaView(annotation: annotation, reuseIdentifier: "KK")
+        }
+        
+        
+        
+        return annotationView
     }
 }
 
