@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-open class AnnotationEtaView: MKAnnotationView {
+open class EtaAnnotationView: MKAnnotationView {
     
     public override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)

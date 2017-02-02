@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 
 
-open class AnnotationEta: NSObject, MKAnnotation {
+open class EtaAnnotation: NSObject, MKAnnotation {
     //Annotation properties 
     
     public var title: String?
