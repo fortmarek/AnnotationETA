@@ -12,16 +12,17 @@ import MapKit
 
 
 protocol DirectionsDelegate {
-    var locationManager: CLLocationManager? { get }
+    var locationManager: CLLocationManager { get }
     var transportType: MKDirectionsTransportType? { get }
+    var destinationCoordinate: CLLocationCoordinate2D { get }
 }
 
 extension DirectionsDelegate {
     //ETA for annotation view
-    func getEta(_ destination: CLLocationCoordinate2D, completion: @escaping (_ eta: String) -> ())  {
+    func getEta(completion: @escaping (_ eta: String) -> ())  {
         
         //Set path
-        let directions = requestDirections(destination)
+        let directions = requestDirections(destinationCoordinate)
         
         //Calculate ETA
         directions.calculateETA(completionHandler: {
@@ -60,7 +61,6 @@ extension DirectionsDelegate {
         let request = MKDirectionsRequest()
         
         guard
-            let locationManager = self.locationManager,
             let currentLocation = locationManager.location
         else {return MKDirections()}
         

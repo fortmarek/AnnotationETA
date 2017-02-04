@@ -13,9 +13,9 @@ import MapKit
 //DirectionButton
 open class DirectionButton: UIButton, DirectionsDelegate {
     
-    var destinationCoordinate: CLLocationCoordinate2D?
+    var destinationCoordinate: CLLocationCoordinate2D
     var transportType: MKDirectionsTransportType?
-    var locationManager: CLLocationManager?
+    var locationManager: CLLocationManager
     
     public init(destinationCoordinate: CLLocationCoordinate2D, locationManager: CLLocationManager, transportType: MKDirectionsTransportType?) {
         self.destinationCoordinate = destinationCoordinate
@@ -39,13 +39,18 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         //Title inset
         titleEdgeInsets = UIEdgeInsets(top: 30, left: -22.5, bottom: 0, right: 0)
         titleLabel?.textAlignment = .center
+        
+        
+        setEtaTitle()
     }
     
     
     
-    public func setEtaTitle(coordinate: CLLocationCoordinate2D) {
+    public func setEtaTitle() {
         
-        getEta(coordinate, completion: {eta in
+        
+        
+        getEta(completion: {eta in
             
             //If titleLabel != nil => title is already set, no need for animation
             guard self.titleLabel?.text == nil else {return}
@@ -94,7 +99,7 @@ open class DirectionButton: UIButton, DirectionsDelegate {
     }
     
     func callGetDirectionsFunc(sender: UIButton) {
-        guard let destinationCoordinate = self.destinationCoordinate else {return}
+        
         let transportType = self.transportType?.rawValue
         // TODO: Pass maps the adress
         let destinationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: destinationCoordinate, addressDictionary: nil))
