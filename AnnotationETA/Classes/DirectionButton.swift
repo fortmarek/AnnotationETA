@@ -13,7 +13,7 @@ import MapKit
 //DirectionButton
 class DirectionButton: UIButton, DirectionsDelegate, MapsDirections {
     
-    var toilet: Toilet?
+    var coordinate: CLLocationCoordinate2D?
     
     var locationDelegate: UserLocation?
     
@@ -90,8 +90,8 @@ class DirectionButton: UIButton, DirectionsDelegate, MapsDirections {
     
     
     func callGetDirectionsFunc(sender: UIButton) {
-        guard let toilet = self.toilet else {return}
-        getDirections(coordinate: toilet.coordinate)
+        guard let coordinate = self.coordinate else {return}
+        getDirections(coordinate: coordinate)
     }
     
     
