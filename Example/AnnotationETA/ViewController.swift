@@ -71,9 +71,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             annotationView = reusableAnnotationView
         }
         else {
+            
             let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotation")
-            
-            
             annotationView = annotationEtaView
             
         }
