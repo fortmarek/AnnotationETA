@@ -99,11 +99,12 @@ open class DirectionButton: UIButton, DirectionsDelegate {
     }
     
     func callGetDirectionsFunc(sender: UIButton) {
-        
-        let transportType = self.transportType?.rawValue
         // TODO: Pass maps the adress
         let destinationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: destinationCoordinate, addressDictionary: nil))
-        destinationMapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
+        
+        guard let transportType = self.transportType else {return}
+        let directionsMode = getLaunchOptionsMode(transportType: UInt32(transportType.rawValue))
+        destinationMapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: directionsMode])
     }
     
     //Opening Apple maps with directions to the toilet
@@ -111,15 +112,26 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         
     }
     
-//    func getLaunchOptionsMode(transportType: MKDirectionsTransportType) -> String {
-//        let tt = transportType
-//        switch tt {
-//            case .automobile:
-//                return MKLaunchOptionsDirectionsModeDriving
-//            default:
-//                return
-//        }
-//    }
+    func getLaunchOptionsMode(transportType: UInt32) -> String {
+        switch transportType {
+            case 1:
+                return MKLaunchOptionsDirectionsModeDriving
+        case 2:
+            return MKLaunchOptionsDirectionsModeWalking
+        case 4:
+            if #available(iOS 9.0, *) {
+                return MKLaunchOptionsDirectionsModeTransit
+            } else {
+                return MKLaunchOptionsDirectionsModeDriving
+            }
+        default:
+            if #available(iOS 10.0, *) {
+                return MKLaunchOptionsDirectionsModeDefault
+            } else {
+                return MKLaunchOptionsDirectionsModeDriving
+            }
+        }
+    }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

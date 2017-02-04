@@ -18,7 +18,6 @@
 		DCB2A09930A88C06E664C6DE69FDC1A9 /* Pods-AnnotationETA_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D48CFFBF2D5EEF055A3906B1CAB63E /* Pods-AnnotationETA_Example-dummy.m */; };
 		F87B2FB71E466C3600DCEC9C /* DirectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87B2FB61E466C3600DCEC9C /* DirectionButton.swift */; };
 		F87B2FB91E466CB200DCEC9C /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87B2FB81E466CB200DCEC9C /* Directions.swift */; };
-		F87B2FBB1E466D4000DCEC9C /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87B2FBA1E466D4000DCEC9C /* UserLocation.swift */; };
 		F883014D1E42A0FF001F6C61 /* EtaAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883014C1E42A0FF001F6C61 /* EtaAnnotationView.swift */; };
 		F88A847D1E43823C00C6D763 /* EtaAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A847C1E43823C00C6D763 /* EtaAnnotation.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +66,6 @@
 		F649CB49469B003B252C1A28086600A4 /* Pods-AnnotationETA_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnnotationETA_Example-umbrella.h"; sourceTree = "<group>"; };
 		F87B2FB61E466C3600DCEC9C /* DirectionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionButton.swift; sourceTree = "<group>"; };
 		F87B2FB81E466CB200DCEC9C /* Directions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
-		F87B2FBA1E466D4000DCEC9C /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		F883014C1E42A0FF001F6C61 /* EtaAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtaAnnotationView.swift; sourceTree = "<group>"; };
 		F88A847C1E43823C00C6D763 /* EtaAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtaAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,7 +158,6 @@
 				F883014C1E42A0FF001F6C61 /* EtaAnnotationView.swift */,
 				F87B2FB61E466C3600DCEC9C /* DirectionButton.swift */,
 				F87B2FB81E466CB200DCEC9C /* Directions.swift */,
-				F87B2FBA1E466D4000DCEC9C /* UserLocation.swift */,
 				F88A847C1E43823C00C6D763 /* EtaAnnotation.swift */,
 			);
 			path = Classes;
@@ -369,7 +366,6 @@
 				F883014D1E42A0FF001F6C61 /* EtaAnnotationView.swift in Sources */,
 				F87B2FB71E466C3600DCEC9C /* DirectionButton.swift in Sources */,
 				5947BBF9766943B43F649FA400BCBE72 /* AnnotationETA-dummy.m in Sources */,
-				F87B2FBB1E466D4000DCEC9C /* UserLocation.swift in Sources */,
 				F88A847D1E43823C00C6D763 /* EtaAnnotation.swift in Sources */,
 				F87B2FB91E466CB200DCEC9C /* Directions.swift in Sources */,
 			);

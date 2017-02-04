@@ -38,7 +38,7 @@ extension DirectionsDelegate {
     //Converting ETA in NSTimeInterval to minutes or hours
     fileprivate func convertEtaIntervalToString(_ etaInterval: TimeInterval) -> String {
         let etaInt = NSInteger(etaInterval)
-        print(self.transportType?.rawValue)
+        
         //Number of seconds in hour
         let oneHour = 3600
         let minutes = (etaInt / 60) % 60
