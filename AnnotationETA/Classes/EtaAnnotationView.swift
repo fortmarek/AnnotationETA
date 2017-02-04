@@ -31,7 +31,7 @@ open class EtaAnnotationView: MKAnnotationView {
         rightCalloutAccessoryView = rightButton
         
         //Left button with ETA
-        leftCalloutAccessoryView = DirectionButton()
+//        leftCalloutAccessoryView = DirectionButton()
         
         //Add target to get directions
         //leftButton.addTarget(self, action: #selector(getDirectionsFromAnnotation), forControlEvents: .TouchUpInside)

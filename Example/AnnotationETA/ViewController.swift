@@ -82,13 +82,15 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard
-            let directionButton = view.leftCalloutAccessoryView as? DirectionButton,
+            //let directionButton = view.leftCalloutAccessoryView as? DirectionButton,
             let annotation = view.annotation
         else {return}
         
-        directionButton.locationManager = locationManager
-        directionButton.transportType = .walking
-        directionButton.destinationCoordinate = annotation.coordinate
+        view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .walking)
+        
+//        directionButton.locationManager = locationManager
+//        directionButton.transportType = .walking
+//        directionButton.destinationCoordinate = annotation.coordinate
         
         
     }

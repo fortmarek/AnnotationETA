@@ -13,12 +13,14 @@ import MapKit
 //DirectionButton
 open class DirectionButton: UIButton, DirectionsDelegate {
     
-    public var destinationCoordinate: CLLocationCoordinate2D?
-    public var transportType: MKDirectionsTransportType?
-    public var locationManager: CLLocationManager?
+    var destinationCoordinate: CLLocationCoordinate2D?
+    var transportType: MKDirectionsTransportType?
+    var locationManager: CLLocationManager?
     
-    init(destinationCoordinate: CLLocationCoordinate2D) {
+    public init(destinationCoordinate: CLLocationCoordinate2D, locationManager: CLLocationManager, transportType: MKDirectionsTransportType?) {
         self.destinationCoordinate = destinationCoordinate
+        self.transportType = transportType
+        self.locationManager = locationManager
         super.init(frame: CGRect(x: 0, y: 0, width: 55, height: 50))
         
         self.addTarget(self, action: #selector(callGetDirectionsFunc), for: .touchUpInside)
