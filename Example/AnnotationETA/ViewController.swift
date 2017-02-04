@@ -71,7 +71,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let annotation = view.annotation else {return}
         
-        view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .automobile)
+        view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .automobile, destinationName: annotation.title ?? "")
         
         
         

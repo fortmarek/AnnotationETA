@@ -14,13 +14,15 @@ import MapKit
 open class DirectionButton: UIButton, DirectionsDelegate {
     
     var destinationCoordinate: CLLocationCoordinate2D
-    var transportType: MKDirectionsTransportType?
     var locationManager: CLLocationManager
+    var transportType: MKDirectionsTransportType?
+    var destinationName: String?
     
-    public init(destinationCoordinate: CLLocationCoordinate2D, locationManager: CLLocationManager, transportType: MKDirectionsTransportType?) {
+    public init(destinationCoordinate: CLLocationCoordinate2D, locationManager: CLLocationManager, transportType: MKDirectionsTransportType?, destinationName: String?) {
         self.destinationCoordinate = destinationCoordinate
         self.transportType = transportType
         self.locationManager = locationManager
+        self.destinationName = destinationName
         super.init(frame: CGRect(x: 0, y: 0, width: 55, height: 50))
         
         self.addTarget(self, action: #selector(callGetDirectionsFunc), for: .touchUpInside)
@@ -99,18 +101,19 @@ open class DirectionButton: UIButton, DirectionsDelegate {
     }
     
     func callGetDirectionsFunc(sender: UIButton) {
+    
         // TODO: Pass maps the adress
         let destinationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: destinationCoordinate, addressDictionary: nil))
+        
+        if let destinationName = self.destinationName {
+            destinationMapItem.name = destinationName
+        }
         
         guard let transportType = self.transportType else {return}
         let directionsMode = getLaunchOptionsMode(transportType: UInt32(transportType.rawValue))
         destinationMapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: directionsMode])
     }
     
-    //Opening Apple maps with directions to the toilet
-    func getDirections(coordinate: CLLocationCoordinate2D) {
-        
-    }
     
     func getLaunchOptionsMode(transportType: UInt32) -> String {
         switch transportType {
