@@ -12,7 +12,8 @@ import MapKit
 
 
 protocol DirectionsDelegate {
-    var locationDelegate: UserLocation? { get }
+    var locationManager: CLLocationManager? { get }
+    var transportType: MKDirectionsTransportType? { get }
 }
 
 extension DirectionsDelegate {
@@ -36,7 +37,7 @@ extension DirectionsDelegate {
     //Converting ETA in NSTimeInterval to minutes or hours
     fileprivate func convertEtaIntervalToString(_ etaInterval: TimeInterval) -> String {
         let etaInt = NSInteger(etaInterval)
-        
+        print(self.transportType?.rawValue)
         //Number of seconds in hour
         let oneHour = 3600
         let minutes = (etaInt / 60) % 60
@@ -48,6 +49,8 @@ extension DirectionsDelegate {
         else {
             return "\(minutes) min"
         }
+        
+        
     }
     
     
@@ -57,12 +60,19 @@ extension DirectionsDelegate {
         let request = MKDirectionsRequest()
         
         guard
-            let locationDelegate = self.locationDelegate,
-            let userLocation = locationDelegate.getUserLocation() else {return MKDirections()}
+            let locationManager = self.locationManager,
+            let currentLocation = locationManager.location
+        else {return MKDirections()}
         
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation.coordinate, addressDictionary: nil))
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation.coordinate, addressDictionary: nil))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destination, addressDictionary: nil))
-        request.transportType = .walking
+        
+        if let transportType = self.transportType {
+            request.transportType = transportType
+        }
+        else {
+            request.transportType = .automobile
+        }
         
         let directions = MKDirections(request: request)
         

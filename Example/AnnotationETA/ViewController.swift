@@ -79,5 +79,18 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         return annotationView
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard
+            let directionButton = view.leftCalloutAccessoryView as? DirectionButton,
+            let annotation = view.annotation
+        else {return}
+        
+        directionButton.locationManager = locationManager
+        directionButton.transportType = .walking
+        directionButton.destinationCoordinate = annotation.coordinate
+        
+        
+    }
 }
 

@@ -11,13 +11,14 @@ import MapKit
 
 
 //DirectionButton
-class DirectionButton: UIButton, DirectionsDelegate, MapsDirections {
+open class DirectionButton: UIButton, DirectionsDelegate {
     
-    var coordinate: CLLocationCoordinate2D?
+    public var destinationCoordinate: CLLocationCoordinate2D?
+    public var transportType: MKDirectionsTransportType?
+    public var locationManager: CLLocationManager?
     
-    var locationDelegate: UserLocation?
-    
-    init() {
+    init(destinationCoordinate: CLLocationCoordinate2D) {
+        self.destinationCoordinate = destinationCoordinate
         super.init(frame: CGRect(x: 0, y: 0, width: 55, height: 50))
         
         self.addTarget(self, action: #selector(callGetDirectionsFunc), for: .touchUpInside)
@@ -38,7 +39,9 @@ class DirectionButton: UIButton, DirectionsDelegate, MapsDirections {
         titleLabel?.textAlignment = .center
     }
     
-    func setEtaTitle(coordinate: CLLocationCoordinate2D) {
+    
+    
+    public func setEtaTitle(coordinate: CLLocationCoordinate2D) {
         
         getEta(coordinate, completion: {eta in
             
@@ -88,30 +91,33 @@ class DirectionButton: UIButton, DirectionsDelegate, MapsDirections {
         }, completion: nil)
     }
     
-    
     func callGetDirectionsFunc(sender: UIButton) {
-        guard let coordinate = self.coordinate else {return}
-        getDirections(coordinate: coordinate)
+        guard let destinationCoordinate = self.destinationCoordinate else {return}
+        let transportType = self.transportType?.rawValue
+        // TODO: Pass maps the adress
+        let destinationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: destinationCoordinate, addressDictionary: nil))
+        destinationMapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
     }
     
+    //Opening Apple maps with directions to the toilet
+    func getDirections(coordinate: CLLocationCoordinate2D) {
+        
+    }
     
+//    func getLaunchOptionsMode(transportType: MKDirectionsTransportType) -> String {
+//        let tt = transportType
+//        switch tt {
+//            case .automobile:
+//                return MKLaunchOptionsDirectionsModeDriving
+//            default:
+//                return
+//        }
+//    }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
 
-@objc protocol MapsDirections {
-}
 
-extension MapsDirections {
-    //Opening Apple maps with directions to the toilet
-    func getDirections(coordinate: CLLocationCoordinate2D) {
-        let destination = coordinate
-        
-        // TODO: Pass maps the adress
-        let destinationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: destination, addressDictionary: nil))
-        destinationMapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
-    }
-}
