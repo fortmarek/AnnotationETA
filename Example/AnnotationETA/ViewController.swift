@@ -19,7 +19,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 //    let capitalCities = ["Paris", "Prague", "Canberra", "Washington, D.C.", "Beijing", "Brasilia", "Pretoria", "New Delhi", "Moscow", "Ottawa", "Abuja"]
 //    let country = ["France", "Czechia", "Australia", "United States", "China", "Brazil", "South Africa", "India", "Russia", "Canada", "Nigeria"]
     
-    let etaAnnotations = [EtaAnnotation(title: "Paris", subtitle: "Capital City of France", coordinate: CLLocationCoordinate2D(latitude: 48.86666667, longitude: 2.333333)), EtaAnnotation(title: "Prague", subtitle: "Capital City of Czechia", coordinate: CLLocationCoordinate2D(latitude: 50.08333333, longitude: 14.466667)), EtaAnnotation(title: "Canberra", subtitle: "Capital City of Australia", coordinate: CLLocationCoordinate2D(latitude: -35.26666667, longitude: 149.133333)), EtaAnnotation(title: "Washingtion, D.C.", subtitle: "Capital City of United States", coordinate: CLLocationCoordinate2D(latitude: 38.883333, longitude: -77)), EtaAnnotation(title: "Beijing", subtitle: "Capital City of China", coordinate: CLLocationCoordinate2D(latitude: 39.91666667, longitude: 116.383333)), EtaAnnotation(title: "Brasilia", subtitle: "Capital City of Brazil", coordinate: CLLocationCoordinate2D(latitude: -15.78333333, longitude: -47.916667)), EtaAnnotation(title: "Pretoria", subtitle: "Capital City of South Africa", coordinate: CLLocationCoordinate2D(latitude: -25.7, longitude: 28.216667)), EtaAnnotation(title: "New Delhi", subtitle: "Capital City of India", coordinate: CLLocationCoordinate2D(latitude: 28.6, longitude: 77.2)), EtaAnnotation(title: "Moscow", subtitle: "Capital City of Russia", coordinate: CLLocationCoordinate2D(latitude: 55.75, longitude: 37.6)), EtaAnnotation(title: "Ottawa", subtitle: "Capital City of Canada", coordinate: CLLocationCoordinate2D(latitude: 45.41666667, longitude: -75.7)), EtaAnnotation(title: "Abuja", subtitle: "Capital City of Nigeria", coordinate: CLLocationCoordinate2D(latitude: 9.083333333, longitude: 7.533333))]
+    let etaAnnotations = [EtaAnnotation(title: "Paris", subtitle: "Capital City of France", coordinate: CLLocationCoordinate2D(latitude: 48.86666667, longitude: 2.333333)), EtaAnnotation(title: "Prague", subtitle: "Capital City of Czechia", coordinate: CLLocationCoordinate2D(latitude: 50.088172, longitude: 14.417863)), EtaAnnotation(title: "Canberra", subtitle: "Capital City of Australia", coordinate: CLLocationCoordinate2D(latitude: -35.26666667, longitude: 149.133333)), EtaAnnotation(title: "Washingtion, D.C.", subtitle: "Capital City of United States", coordinate: CLLocationCoordinate2D(latitude: 38.883333, longitude: -77)), EtaAnnotation(title: "Beijing", subtitle: "Capital City of China", coordinate: CLLocationCoordinate2D(latitude: 39.91666667, longitude: 116.383333)), EtaAnnotation(title: "Brasilia", subtitle: "Capital City of Brazil", coordinate: CLLocationCoordinate2D(latitude: -15.78333333, longitude: -47.916667)), EtaAnnotation(title: "Pretoria", subtitle: "Capital City of South Africa", coordinate: CLLocationCoordinate2D(latitude: -25.7, longitude: 28.216667)), EtaAnnotation(title: "New Delhi", subtitle: "Capital City of India", coordinate: CLLocationCoordinate2D(latitude: 28.6, longitude: 77.2)), EtaAnnotation(title: "Moscow", subtitle: "Capital City of Russia", coordinate: CLLocationCoordinate2D(latitude: 55.75, longitude: 37.6)), EtaAnnotation(title: "Ottawa", subtitle: "Capital City of Canada", coordinate: CLLocationCoordinate2D(latitude: 45.41666667, longitude: -75.7)), EtaAnnotation(title: "Abuja", subtitle: "Capital City of Nigeria", coordinate: CLLocationCoordinate2D(latitude: 9.083333333, longitude: 7.533333))]
     
     
 
@@ -72,10 +72,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
         else {
             let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotation")
+            
+            annotationEtaView.centerOffset = CGPoint(x: 0, y: -(annotationEtaView.frame.height / 2))
+            print(annotationEtaView.frame.height)
+            print(annotationEtaView.centerOffset)
             annotationView = annotationEtaView
+            
         }
-        
-        
         
         return annotationView
     }

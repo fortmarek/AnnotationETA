@@ -17,6 +17,7 @@ open class EtaAnnotationView: MKAnnotationView {
         self.annotation = annotation
         self.canShowCallout = true
         self.image = UIImage(named: "Pin")
+        
     }
     
     required public init?(coder aDecoder: NSCoder) {
