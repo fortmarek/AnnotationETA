@@ -73,9 +73,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         else {
             let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotation")
             
-            annotationEtaView.centerOffset = CGPoint(x: 0, y: -(annotationEtaView.frame.height / 2))
-            print(annotationEtaView.frame.height)
-            print(annotationEtaView.centerOffset)
+            
             annotationView = annotationEtaView
             
         }
