@@ -16,10 +16,19 @@ open class EtaAnnotationView: MKAnnotationView {
         
         self.annotation = annotation
         self.canShowCallout = true
-        self.image = UIImage(named: "Pin")
+        //self.image = UIImage(named: "Pin")
+        self.frame = CGRect(origin: self.frame.origin, size: CGSize(width: 29, height: 39))
         self.centerOffset = CGPoint(x: 0, y: -(self.frame.height)/2)
-    
+        self.backgroundColor = UIColor.clear
+        
+        
         setCalloutAccessoryView()
+    }
+    
+    override open func draw(_ rect: CGRect) {
+        let path = UIBezierPath(ovalIn: rect)
+        UIColor.green.setFill()
+        path.fill()
     }
     
     func setCalloutAccessoryView() {

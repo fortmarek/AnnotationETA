@@ -62,7 +62,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             
             let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotation")
             annotationView = annotationEtaView
-            
+            print(annotationEtaView.frame)
         }
         
         return annotationView
