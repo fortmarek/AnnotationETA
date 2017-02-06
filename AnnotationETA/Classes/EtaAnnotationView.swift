@@ -11,43 +11,46 @@ import MapKit
 
 open class EtaAnnotationView: MKAnnotationView {
     
+    open var pinColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
+    open var pinSecondaryColor = UIColor.white
+    
     public override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         
         self.annotation = annotation
         self.canShowCallout = true
-        //self.image = UIImage(named: "Pin")
-        self.frame = CGRect(origin: self.frame.origin, size: CGSize(width: 20, height: 40))
+        self.frame = CGRect(origin: self.frame.origin, size: CGSize(width: 20, height: 33))
+        //Bottom part of the pin on the location, not the center
         self.centerOffset = CGPoint(x: 0, y: -(self.frame.height)/2)
         self.backgroundColor = UIColor.clear
-        
         
         setCalloutAccessoryView()
     }
     
     override open func draw(_ rect: CGRect) {
         
+        //Orange Circle
         var bigCircleRect = rect
-        bigCircleRect.size.height = rect.size.height/2
+        bigCircleRect.size.height = rect.size.width
         let path = UIBezierPath(ovalIn: bigCircleRect)
-        UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0).setFill()
+        pinColor.setFill()
         path.fill()
         
+        //Bottom part of the pin with arc
         let bottomPath = UIBezierPath()
-        bottomPath.move(to: CGPoint(x: 0, y: bigCircleRect.size.height/2 + 2))
-        bottomPath.addLine(to: CGPoint(x: self.frame.width, y: bigCircleRect.size.height/2 + 2))
-        //bottomPath.addLine(to: CGPoint(x: self.frame.width/2, y: self.frame.height))
+        bottomPath.move(to: CGPoint(x: 0, y: bigCircleRect.size.height/2 + 1.5))
+        bottomPath.addLine(to: CGPoint(x: self.frame.width, y: bigCircleRect.size.height/2 + 1.5))
         bottomPath.addArc(withCenter: CGPoint(x: self.frame.width/2, y: self.frame.height - 2), radius: 2, startAngle: CGFloat(0), endAngle: CGFloat(M_PI), clockwise: true)
-        bottomPath.addLine(to: CGPoint(x: 0, y: bigCircleRect.size.height/2 + 2))
+        bottomPath.addLine(to: CGPoint(x: 0, y: bigCircleRect.size.height/2 + 1.5))
         bottomPath.close()
-        UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0).setFill()
-        //bottomPath.stroke()
+        pinColor.setFill()
         bottomPath.fill()
         
-        let smallSize = bigCircleRect.size.width * 0.4
+        //small white circle in the center
+        let smallSize = bigCircleRect.size.width * 0.5
         let smallCircleRect = CGRect(x: (bigCircleRect.size.width - smallSize)/2, y: (bigCircleRect.size.width - smallSize)/2, width: smallSize, height: smallSize)
         let smallPath = UIBezierPath(ovalIn: smallCircleRect)
-        UIColor.white.setFill()
+        pinSecondaryColor.setFill()
         smallPath.fill()
         
 

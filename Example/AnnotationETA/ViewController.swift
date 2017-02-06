@@ -61,8 +61,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         else {
             
             let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotation")
+            annotationEtaView.pinColor = UIColor.blue
             annotationView = annotationEtaView
-            print(annotationEtaView.frame)
         }
         
         return annotationView
