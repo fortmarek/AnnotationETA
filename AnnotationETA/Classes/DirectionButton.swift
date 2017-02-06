@@ -23,7 +23,7 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         self.transportType = transportType
         self.locationManager = locationManager
         self.destinationName = destinationName
-        super.init(frame: CGRect(x: 0, y: 0, width: 55, height: 50))
+        super.init(frame: CGRect(x: 0, y: 0, width: 50, height: 51))
         
         self.addTarget(self, action: #selector(callGetDirectionsFunc), for: .touchUpInside)
         
