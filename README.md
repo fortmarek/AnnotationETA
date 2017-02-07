@@ -6,7 +6,11 @@
 [![Platform](https://img.shields.io/cocoapods/p/AnnotationETA.svg?style=flat)](http://cocoapods.org/pods/AnnotationETA)
 
 
-![demo](http://imgur.com/SDIkf4b.gif)
+## AnnotationETA
+
+AnnotationETA will easily let you implement MapKit annotations with slick pins, custom colors and cool calloutView showing ETA out of the box!
+
+![demo](https://github.com/fortmarek/AnnotationETA/blob/master/screens/annotationEta.gif)
 
 ## Example
 
