@@ -52,6 +52,16 @@
                ReferencedContainer = "container:AnnotationETA.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F8D9CF511E4A7A8A000BCFB8"
+               BuildableName = "AnnotationETATests.xctest"
+               BlueprintName = "AnnotationETATests"
+               ReferencedContainer = "container:AnnotationETA.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

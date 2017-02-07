@@ -17,6 +17,12 @@
 		A78DA16B647057878F2ACD21 /* Pods_AnnotationETA_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6E3A28D09A7E19103A8C6B /* Pods_AnnotationETA_Example.framework */; };
 		F8641C0A1E4A13B9009C9DF1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8641C091E4A13B9009C9DF1 /* DetailViewController.swift */; };
 		F89C98401E4287FE0055078B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89C983F1E4287FE0055078B /* MapKit.framework */; };
+		F8D9CF531E4A7A8A000BCFB8 /* AnnotationETA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D9CF4A1E4A7A8A000BCFB8 /* AnnotationETA.framework */; };
+		F8D9CF5A1E4A7A8A000BCFB8 /* AnnotationETATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9CF591E4A7A8A000BCFB8 /* AnnotationETATests.swift */; };
+		F8D9CF5C1E4A7A8A000BCFB8 /* AnnotationETA.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D9CF4C1E4A7A8A000BCFB8 /* AnnotationETA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8D9CF5F1E4A7A8A000BCFB8 /* AnnotationETA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D9CF4A1E4A7A8A000BCFB8 /* AnnotationETA.framework */; };
+		F8D9CF601E4A7A8A000BCFB8 /* AnnotationETA.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8D9CF4A1E4A7A8A000BCFB8 /* AnnotationETA.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8D9CF691E4A7AE4000BCFB8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D9CF681E4A7AE4000BCFB8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +33,42 @@
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = AnnotationETA;
 		};
+		F8D9CF541E4A7A8A000BCFB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8D9CF491E4A7A8A000BCFB8;
+			remoteInfo = AnnotationETA;
+		};
+		F8D9CF561E4A7A8A000BCFB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = AnnotationETA_Example;
+		};
+		F8D9CF5D1E4A7A8A000BCFB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8D9CF491E4A7A8A000BCFB8;
+			remoteInfo = AnnotationETA;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F8D9CF661E4A7A8A000BCFB8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F8D9CF601E4A7A8A000BCFB8 /* AnnotationETA.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03EF22E0F2C54D9DA81A01AC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -50,6 +91,13 @@
 		C462F967F44449C0A3AB96E2 /* Pods-AnnotationETA_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationETA_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationETA_Tests/Pods-AnnotationETA_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F8641C091E4A13B9009C9DF1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F89C983F1E4287FE0055078B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F8D9CF4A1E4A7A8A000BCFB8 /* AnnotationETA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnnotationETA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D9CF4C1E4A7A8A000BCFB8 /* AnnotationETA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnotationETA.h; sourceTree = "<group>"; };
+		F8D9CF4D1E4A7A8A000BCFB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8D9CF521E4A7A8A000BCFB8 /* AnnotationETATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnnotationETATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D9CF591E4A7A8A000BCFB8 /* AnnotationETATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationETATests.swift; sourceTree = "<group>"; };
+		F8D9CF5B1E4A7A8A000BCFB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8D9CF681E4A7AE4000BCFB8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F97F83DFB984629471875EF5 /* Pods-AnnotationETA_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationETA_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationETA_Example/Pods-AnnotationETA_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F89C98401E4287FE0055078B /* MapKit.framework in Frameworks */,
+				F8D9CF5F1E4A7A8A000BCFB8 /* AnnotationETA.framework in Frameworks */,
 				A78DA16B647057878F2ACD21 /* Pods_AnnotationETA_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +117,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A7D86408C112B59A4CBFF90 /* Pods_AnnotationETA_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D9CF461E4A7A8A000BCFB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D9CF4F1E4A7A8A000BCFB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D9CF531E4A7A8A000BCFB8 /* AnnotationETA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,9 +151,12 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				F8D9CF681E4A7AE4000BCFB8 /* Default-568h@2x.png */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for AnnotationETA */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				F8D9CF4B1E4A7A8A000BCFB8 /* AnnotationETA */,
+				F8D9CF581E4A7A8A000BCFB8 /* AnnotationETATests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				BEFE5BCA4AF6B2A035749C8A /* Pods */,
 				1C84CD62AA9C37B584685D10 /* Frameworks */,
@@ -101,6 +168,8 @@
 			children = (
 				607FACD01AFB9204008FA782 /* AnnotationETA_Example.app */,
 				607FACE51AFB9204008FA782 /* AnnotationETA_Tests.xctest */,
+				F8D9CF4A1E4A7A8A000BCFB8 /* AnnotationETA.framework */,
+				F8D9CF521E4A7A8A000BCFB8 /* AnnotationETATests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,7 +235,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F8D9CF4B1E4A7A8A000BCFB8 /* AnnotationETA */ = {
+			isa = PBXGroup;
+			children = (
+				F8D9CF4C1E4A7A8A000BCFB8 /* AnnotationETA.h */,
+				F8D9CF4D1E4A7A8A000BCFB8 /* Info.plist */,
+			);
+			path = AnnotationETA;
+			sourceTree = "<group>";
+		};
+		F8D9CF581E4A7A8A000BCFB8 /* AnnotationETATests */ = {
+			isa = PBXGroup;
+			children = (
+				F8D9CF591E4A7A8A000BCFB8 /* AnnotationETATests.swift */,
+				F8D9CF5B1E4A7A8A000BCFB8 /* Info.plist */,
+			);
+			path = AnnotationETATests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F8D9CF471E4A7A8A000BCFB8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D9CF5C1E4A7A8A000BCFB8 /* AnnotationETA.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		607FACCF1AFB9204008FA782 /* AnnotationETA_Example */ = {
@@ -179,10 +277,12 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				5D00F04E005B59171EFE66B0 /* [CP] Embed Pods Frameworks */,
 				CE506153C17AFD5E662BAA51 /* [CP] Copy Pods Resources */,
+				F8D9CF661E4A7A8A000BCFB8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F8D9CF5E1E4A7A8A000BCFB8 /* PBXTargetDependency */,
 			);
 			name = AnnotationETA_Example;
 			productName = AnnotationETA;
@@ -210,13 +310,50 @@
 			productReference = 607FACE51AFB9204008FA782 /* AnnotationETA_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F8D9CF491E4A7A8A000BCFB8 /* AnnotationETA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8D9CF651E4A7A8A000BCFB8 /* Build configuration list for PBXNativeTarget "AnnotationETA" */;
+			buildPhases = (
+				F8D9CF451E4A7A8A000BCFB8 /* Sources */,
+				F8D9CF461E4A7A8A000BCFB8 /* Frameworks */,
+				F8D9CF471E4A7A8A000BCFB8 /* Headers */,
+				F8D9CF481E4A7A8A000BCFB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnnotationETA;
+			productName = AnnotationETA;
+			productReference = F8D9CF4A1E4A7A8A000BCFB8 /* AnnotationETA.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F8D9CF511E4A7A8A000BCFB8 /* AnnotationETATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8D9CF671E4A7A8A000BCFB8 /* Build configuration list for PBXNativeTarget "AnnotationETATests" */;
+			buildPhases = (
+				F8D9CF4E1E4A7A8A000BCFB8 /* Sources */,
+				F8D9CF4F1E4A7A8A000BCFB8 /* Frameworks */,
+				F8D9CF501E4A7A8A000BCFB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8D9CF551E4A7A8A000BCFB8 /* PBXTargetDependency */,
+				F8D9CF571E4A7A8A000BCFB8 /* PBXTargetDependency */,
+			);
+			name = AnnotationETATests;
+			productName = AnnotationETATests;
+			productReference = F8D9CF521E4A7A8A000BCFB8 /* AnnotationETATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -236,6 +373,17 @@
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
+					F8D9CF491E4A7A8A000BCFB8 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = QH95ER52SG;
+						ProvisioningStyle = Automatic;
+					};
+					F8D9CF511E4A7A8A000BCFB8 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = QH95ER52SG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "AnnotationETA" */;
@@ -253,6 +401,8 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* AnnotationETA_Example */,
 				607FACE41AFB9204008FA782 /* AnnotationETA_Tests */,
+				F8D9CF491E4A7A8A000BCFB8 /* AnnotationETA */,
+				F8D9CF511E4A7A8A000BCFB8 /* AnnotationETATests */,
 			);
 		};
 /* End PBXProject section */
@@ -263,12 +413,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				F8D9CF691E4A7AE4000BCFB8 /* Default-568h@2x.png in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D9CF481E4A7A8A000BCFB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D9CF501E4A7A8A000BCFB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,6 +554,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8D9CF451E4A7A8A000BCFB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D9CF4E1E4A7A8A000BCFB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D9CF5A1E4A7A8A000BCFB8 /* AnnotationETATests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -396,6 +576,21 @@
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* AnnotationETA_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+		};
+		F8D9CF551E4A7A8A000BCFB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8D9CF491E4A7A8A000BCFB8 /* AnnotationETA */;
+			targetProxy = F8D9CF541E4A7A8A000BCFB8 /* PBXContainerItemProxy */;
+		};
+		F8D9CF571E4A7A8A000BCFB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* AnnotationETA_Example */;
+			targetProxy = F8D9CF561E4A7A8A000BCFB8 /* PBXContainerItemProxy */;
+		};
+		F8D9CF5E1E4A7A8A000BCFB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8D9CF491E4A7A8A000BCFB8 /* AnnotationETA */;
+			targetProxy = F8D9CF5D1E4A7A8A000BCFB8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -570,6 +765,98 @@
 			};
 			name = Release;
 		};
+		F8D9CF611E4A7A8A000BCFB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QH95ER52SG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AnnotationETA/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marekfort.AnnotationETA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F8D9CF621E4A7A8A000BCFB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QH95ER52SG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AnnotationETA/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marekfort.AnnotationETA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F8D9CF631E4A7A8A000BCFB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = QH95ER52SG;
+				INFOPLIST_FILE = AnnotationETATests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marekfort.AnnotationETATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnnotationETA_Example.app/AnnotationETA_Example";
+			};
+			name = Debug;
+		};
+		F8D9CF641E4A7A8A000BCFB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = QH95ER52SG;
+				INFOPLIST_FILE = AnnotationETATests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marekfort.AnnotationETATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnnotationETA_Example.app/AnnotationETA_Example";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -599,6 +886,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F8D9CF651E4A7A8A000BCFB8 /* Build configuration list for PBXNativeTarget "AnnotationETA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D9CF611E4A7A8A000BCFB8 /* Debug */,
+				F8D9CF621E4A7A8A000BCFB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8D9CF671E4A7A8A000BCFB8 /* Build configuration list for PBXNativeTarget "AnnotationETATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D9CF631E4A7A8A000BCFB8 /* Debug */,
+				F8D9CF641E4A7A8A000BCFB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
