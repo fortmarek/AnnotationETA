@@ -115,6 +115,7 @@ extension ViewController: CLLocationManagerDelegate {
         //Region
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
         
+        
         //Show region in mapView
         mapView.setRegion(region, animated: true)
         locationManager.stopUpdatingLocation()

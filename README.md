@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/AnnotationETA.svg?style=flat)](http://cocoapods.org/pods/AnnotationETA)
 [![Platform](https://img.shields.io/cocoapods/p/AnnotationETA.svg?style=flat)](http://cocoapods.org/pods/AnnotationETA)
 
+
+![demo](http://imgur.com/SDIkf4b.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
