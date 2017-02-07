@@ -41,7 +41,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             //Placing toilets on the map
             self.mapView.addAnnotations(self.etaAnnotations)
         })
-        
+    
     }
     
 
