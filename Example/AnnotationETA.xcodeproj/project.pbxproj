@@ -23,6 +23,10 @@
 		F8D9CF5F1E4A7A8A000BCFB8 /* AnnotationETA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D9CF4A1E4A7A8A000BCFB8 /* AnnotationETA.framework */; };
 		F8D9CF601E4A7A8A000BCFB8 /* AnnotationETA.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8D9CF4A1E4A7A8A000BCFB8 /* AnnotationETA.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8D9CF691E4A7AE4000BCFB8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D9CF681E4A7AE4000BCFB8 /* Default-568h@2x.png */; };
+		F8D9CF6E1E4A7BA6000BCFB8 /* DirectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9CF6A1E4A7BA6000BCFB8 /* DirectionButton.swift */; };
+		F8D9CF6F1E4A7BA6000BCFB8 /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9CF6B1E4A7BA6000BCFB8 /* Directions.swift */; };
+		F8D9CF701E4A7BA6000BCFB8 /* EtaAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9CF6C1E4A7BA6000BCFB8 /* EtaAnnotation.swift */; };
+		F8D9CF711E4A7BA6000BCFB8 /* EtaAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9CF6D1E4A7BA6000BCFB8 /* EtaAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +102,10 @@
 		F8D9CF591E4A7A8A000BCFB8 /* AnnotationETATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationETATests.swift; sourceTree = "<group>"; };
 		F8D9CF5B1E4A7A8A000BCFB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8D9CF681E4A7AE4000BCFB8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F8D9CF6A1E4A7BA6000BCFB8 /* DirectionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DirectionButton.swift; path = ../../AnnotationETA/Classes/DirectionButton.swift; sourceTree = "<group>"; };
+		F8D9CF6B1E4A7BA6000BCFB8 /* Directions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Directions.swift; path = ../../AnnotationETA/Classes/Directions.swift; sourceTree = "<group>"; };
+		F8D9CF6C1E4A7BA6000BCFB8 /* EtaAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EtaAnnotation.swift; path = ../../AnnotationETA/Classes/EtaAnnotation.swift; sourceTree = "<group>"; };
+		F8D9CF6D1E4A7BA6000BCFB8 /* EtaAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EtaAnnotationView.swift; path = ../../AnnotationETA/Classes/EtaAnnotationView.swift; sourceTree = "<group>"; };
 		F97F83DFB984629471875EF5 /* Pods-AnnotationETA_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationETA_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationETA_Example/Pods-AnnotationETA_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +246,10 @@
 		F8D9CF4B1E4A7A8A000BCFB8 /* AnnotationETA */ = {
 			isa = PBXGroup;
 			children = (
+				F8D9CF6A1E4A7BA6000BCFB8 /* DirectionButton.swift */,
+				F8D9CF6B1E4A7BA6000BCFB8 /* Directions.swift */,
+				F8D9CF6C1E4A7BA6000BCFB8 /* EtaAnnotation.swift */,
+				F8D9CF6D1E4A7BA6000BCFB8 /* EtaAnnotationView.swift */,
 				F8D9CF4C1E4A7A8A000BCFB8 /* AnnotationETA.h */,
 				F8D9CF4D1E4A7A8A000BCFB8 /* Info.plist */,
 			);
@@ -376,6 +388,7 @@
 					F8D9CF491E4A7A8A000BCFB8 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = QH95ER52SG;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					F8D9CF511E4A7A8A000BCFB8 = {
@@ -558,6 +571,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D9CF6E1E4A7BA6000BCFB8 /* DirectionButton.swift in Sources */,
+				F8D9CF701E4A7BA6000BCFB8 /* EtaAnnotation.swift in Sources */,
+				F8D9CF711E4A7BA6000BCFB8 /* EtaAnnotationView.swift in Sources */,
+				F8D9CF6F1E4A7BA6000BCFB8 /* Directions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +787,7 @@
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -786,6 +804,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -798,6 +817,7 @@
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -894,6 +914,7 @@
 				F8D9CF621E4A7A8A000BCFB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8D9CF671E4A7A8A000BCFB8 /* Build configuration list for PBXNativeTarget "AnnotationETATests" */ = {
 			isa = XCConfigurationList;
@@ -902,6 +923,7 @@
 				F8D9CF641E4A7A8A000BCFB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
