@@ -22,7 +22,7 @@ extension DirectionsDelegate {
     func getEta(completion: @escaping (_ eta: String) -> ())  {
         
         //Set path
-        let directions = requestDirections(destinationCoordinate)
+        guard let directions = requestDirections(destinationCoordinate) else {return}
         
         //Calculate ETA
         directions.calculateETA(completionHandler: {
@@ -56,15 +56,11 @@ extension DirectionsDelegate {
     
     
     //ETA estimate
-    fileprivate func requestDirections(_ destination: CLLocationCoordinate2D) -> MKDirections {
-        print("HELLO")
-        
+    fileprivate func requestDirections(_ destination: CLLocationCoordinate2D) -> MKDirections? {
         
         guard
             let currentLocation = locationManager.location
-        else {return MKDirections()}
-        
-        print(currentLocation)
+        else {return nil}
         
         let request = MKDirectionsRequest()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation.coordinate, addressDictionary: nil))
