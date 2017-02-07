@@ -2,6 +2,7 @@
 
 [![CI Status](http://img.shields.io/travis/fortmarek/AnnotationETA.svg?style=flat)](https://travis-ci.org/fortmarek/AnnotationETA)
 [![Version](https://img.shields.io/cocoapods/v/AnnotationETA.svg?style=flat)](http://cocoapods.org/pods/AnnotationETA)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/AnnotationETA.svg?style=flat)](http://cocoapods.org/pods/AnnotationETA)
 [![Platform](https://img.shields.io/cocoapods/p/AnnotationETA.svg?style=flat)](http://cocoapods.org/pods/AnnotationETA)
 
