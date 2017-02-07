@@ -29,7 +29,61 @@ Include all the files under Pod/Classes into your project.
 
 ## Set Up
 
-To correctly set up to use this library in ```swift func ```
+In ```swift
+func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation)``` set your `MKAnnotationView` to `AnnotationEtaView`:
+```swift 
+let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotationIdentifier")
+annotationView = annotationEtaView
+```
+
+To display ETA when the annotation is selected:
+
+```swift
+func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+guard let annotation = view.annotation else {return}
+if annotation is MKUserLocation {return}
+
+view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .automobile, destinationName: annotation.title ?? "")
+}
+```
+
+## Detail Button
+
+With detail button you can point to another view controller where you can display additional information about the annotation. Right under initializing etaAnnotationView write this:
+
+```swift 
+annotationEtaView.setDetailShowButton()
+annotationEtaView.rightButton?.addTarget(self, action: #selector(detailButtonTapped), for: .touchUpInside)
+```
+
+The action then should trigger function showing the detailViewController and also passing the information from the selected annotation, for example like this:
+
+```swift
+func detailButtonTapped() {
+guard
+mapView.selectedAnnotations.count == 1,
+let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController
+else {return}
+
+detailViewController.annotation = mapView.selectedAnnotations[0]
+
+self.present(detailViewController, animated: true, completion: nil)
+}
+```
+
+## Customization
+
+### Pin Color
+
+Pin color not only sets the color of the pin, but left and rightCalloutAccessoryView as well
+
+```swift 
+annotationEtaView.pinColor = UIColor.blue
+```
+
+## More
+
+For more detailed implementation take a look at the example or contact me.
 
 ## Author
 

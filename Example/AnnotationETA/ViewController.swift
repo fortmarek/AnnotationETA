@@ -74,7 +74,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     func detailButtonTapped() {
-        
         guard
             mapView.selectedAnnotations.count == 1,
             let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController
