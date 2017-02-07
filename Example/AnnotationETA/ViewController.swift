@@ -62,7 +62,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
         else {
             let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotation")
-            annotationEtaView.pinColor = UIColor.blue
+            annotationEtaView.pinColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
             
             annotationEtaView.setDetailShowButton()
             annotationEtaView.rightButton?.addTarget(self, action: #selector(detailButtonTapped), for: .touchUpInside)

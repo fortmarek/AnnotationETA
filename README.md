@@ -13,12 +13,23 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### CocoaPods
+
 AnnotationETA is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "AnnotationETA"
 ```
+
+### Manually
+
+Include all the files under Pod/Classes into your project.
+
+
+## Set Up
+
+To correctly set up to use this library in ```swift func ```
 
 ## Author
 
@@ -27,3 +38,5 @@ fortmarek, marekfort@me.com
 ## License
 
 AnnotationETA is available under the MIT license. See the LICENSE file for more info.
+
+
