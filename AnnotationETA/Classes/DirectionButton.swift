@@ -29,9 +29,6 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         
         self.addTarget(self, action: #selector(callGetDirectionsFunc), for: .touchUpInside)
         
-        //BackgroundColor
-        backgroundColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
-        
         guard
             let transportType = self.transportType,
             let image = transportType.getImage()
@@ -140,11 +137,7 @@ extension MKDirectionsTransportType {
                 return MKLaunchOptionsDirectionsModeDriving
             }
         default:
-            if #available(iOS 10.0, *) {
-                return MKLaunchOptionsDirectionsModeDefault
-            } else {
-                return MKLaunchOptionsDirectionsModeDriving
-            }
+            return MKLaunchOptionsDirectionsModeDriving
         }
     }
     
@@ -161,11 +154,7 @@ extension MKDirectionsTransportType {
                 return UIImage(named: "automobile")
             }
         default:
-            if #available(iOS 10.0, *) {
-                return UIImage(named: "automobile")
-            } else {
-                return UIImage(named: "automobile")
-            }
+            return UIImage(named: "automobile")
         }
     }
 }

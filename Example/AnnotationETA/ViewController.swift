@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import AnnotationETA
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
@@ -53,19 +53,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
+        if annotation is MKUserLocation {return nil}
+        
         var annotationView = MKAnnotationView()
         
         if let reusableAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "etaAnnotation") {
             annotationView = reusableAnnotationView
         }
         else {
-            
             let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotation")
-            annotationEtaView.pinColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
+            annotationEtaView.pinColor = UIColor.blue
             
             annotationEtaView.setDetailShowButton()
             annotationEtaView.rightButton?.addTarget(self, action: #selector(detailButtonTapped), for: .touchUpInside)
-        
+            
             annotationView = annotationEtaView
         }
         
@@ -86,12 +87,43 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let annotation = view.annotation else {return}
+        if annotation is MKUserLocation {return}
         
-        if #available(iOS 9.0, *) {
-            view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .transit, destinationName: annotation.title ?? "")
-        } else {
-            // Fallback on earlier versions
-        }
+        view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .automobile, destinationName: annotation.title ?? "")
     }
 }
 
+extension ViewController: CLLocationManagerDelegate {
+    //Heading
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        //Ensure heading's value is positive
+        let heading = newHeading.trueHeading > 0 ? newHeading.trueHeading : newHeading.magneticHeading
+        
+        //Orientate map according to where iPhone's facing
+        let mapCamera = mapView.camera
+        mapCamera.heading = heading
+        mapView.setCamera(mapCamera, animated: false)
+    }
+    
+    //The initial positon and region of the map
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        //Locations.last = current location
+        guard let location = locations.last else {return}
+        
+        //Position
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        
+        //Region
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        //Show region in mapView
+        mapView.setRegion(region, animated: true)
+        locationManager.stopUpdatingLocation()
+        
+    }
+    
+    //Location manager fail
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Errors: \(error)")
+    }
+}

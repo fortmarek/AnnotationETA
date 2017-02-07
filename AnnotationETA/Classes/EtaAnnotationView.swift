@@ -21,10 +21,17 @@ open class EtaAnnotationView: MKAnnotationView {
         self.annotation = annotation
         self.canShowCallout = true
         self.frame = CGRect(origin: self.frame.origin, size: CGSize(width: 20, height: 30))
-        //Bottom part of the pin on the location, not the center
+        //Bottom part of the pin is on the location, not the center, offset needed
         self.centerOffset = CGPoint(x: 0, y: -(self.frame.height)/2)
         self.backgroundColor = UIColor.clear
         
+        
+    }
+    
+    open override var leftCalloutAccessoryView: UIView? {
+        didSet {
+            leftCalloutAccessoryView?.backgroundColor = pinColor
+        }
     }
     
     override open func draw(_ rect: CGRect) {
@@ -60,7 +67,7 @@ open class EtaAnnotationView: MKAnnotationView {
     public func setDetailShowButton() {
         //Detailed toilet info button
         rightButton = UIButton.init(type: .detailDisclosure)
-        rightButton?.tintColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
+        rightButton?.tintColor = pinColor
         
         rightCalloutAccessoryView = rightButton
         

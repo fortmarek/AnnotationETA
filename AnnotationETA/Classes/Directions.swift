@@ -57,13 +57,16 @@ extension DirectionsDelegate {
     
     //ETA estimate
     fileprivate func requestDirections(_ destination: CLLocationCoordinate2D) -> MKDirections {
+        print("HELLO")
         
-        let request = MKDirectionsRequest()
         
         guard
             let currentLocation = locationManager.location
         else {return MKDirections()}
         
+        print(currentLocation)
+        
+        let request = MKDirectionsRequest()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation.coordinate, addressDictionary: nil))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destination, addressDictionary: nil))
         
