@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		A78DA16B647057878F2ACD21 /* Pods_AnnotationETA_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6E3A28D09A7E19103A8C6B /* Pods_AnnotationETA_Example.framework */; };
+		F8641C0A1E4A13B9009C9DF1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8641C091E4A13B9009C9DF1 /* DetailViewController.swift */; };
 		F88A84811E438B3800C6D763 /* CoordinationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A84801E438B3800C6D763 /* CoordinationSet.swift */; };
 		F89C98401E4287FE0055078B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89C983F1E4287FE0055078B /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		6604A3FE38E59BD244AB9357 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A335813E707027E15CA00668 /* Pods-AnnotationETA_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationETA_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationETA_Example/Pods-AnnotationETA_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C462F967F44449C0A3AB96E2 /* Pods-AnnotationETA_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationETA_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationETA_Tests/Pods-AnnotationETA_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F8641C091E4A13B9009C9DF1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F88A84801E438B3800C6D763 /* CoordinationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinationSet.swift; sourceTree = "<group>"; };
 		F89C983F1E4287FE0055078B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F97F83DFB984629471875EF5 /* Pods-AnnotationETA_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationETA_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationETA_Example/Pods-AnnotationETA_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				F8641C091E4A13B9009C9DF1 /* DetailViewController.swift */,
 				F88A84801E438B3800C6D763 /* CoordinationSet.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -378,6 +381,7 @@
 				F88A84811E438B3800C6D763 /* CoordinationSet.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				F8641C0A1E4A13B9009C9DF1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

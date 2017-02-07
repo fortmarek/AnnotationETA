@@ -73,12 +73,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     func detailButtonTapped() {
-//        guard let detailViewController = self.detailViewController else {return}
-//        
-//        viewController.navigationController?.navigationBar.tintColor = Colors.pumpkinColor
-//        viewController.toilet = toilet
-//        
-//        ShowDelegate.showViewController(viewController: viewController)
+        guard let detailViewController = self.detailViewController else {return}
+        
+        viewController.navigationController?.navigationBar.tintColor = Colors.pumpkinColor
+        viewController.toilet = toilet
+        
+        ShowDelegate.showViewController(viewController: viewController)
         
     }
     
