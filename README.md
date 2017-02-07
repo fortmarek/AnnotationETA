@@ -24,7 +24,7 @@ pod "AnnotationETA"
 
 ### Manually
 
-Include all the files under Pod/Classes into your project.
+Include all the files under AnnotationETA/Classes into your project.
 
 
 ## Set Up
@@ -42,7 +42,7 @@ func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
 guard let annotation = view.annotation else {return}
 if annotation is MKUserLocation {return}
 
-view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, \ntransportType: .automobile, destinationName: annotation.title ?? "")
+view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .automobile, destinationName: annotation.title ?? "")
 }
 ```
 
