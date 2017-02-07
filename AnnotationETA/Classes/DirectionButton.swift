@@ -30,23 +30,29 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         //BackgroundColor
         backgroundColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
         
+        guard
+            let transportType = self.transportType,
+            let image = transportType.getImage()
+        else {return}
+        
         //Image
-        setImage(UIImage(named: "Walking"), for: UIControlState())
-        setImage((UIImage(named: "Walking")), for: .highlighted)
+        setImage(image, for: UIControlState())
+        setImage(image, for: .highlighted)
+        
+        
+        let imageWidth = image.size.width
         
         //Center image in view, 22 is for image width
-        let leftImageInset = (frame.size.width - 22) / 2
+        let leftImageInset = (frame.size.width - imageWidth) / 2
         imageEdgeInsets = UIEdgeInsets(top: 0, left: leftImageInset, bottom: 0, right: leftImageInset)
         
         //Title inset
-        titleEdgeInsets = UIEdgeInsets(top: 30, left: -22.5, bottom: 0, right: 0)
+        titleEdgeInsets = UIEdgeInsets(top: 30, left: -imageWidth, bottom: 0, right: 0)
         titleLabel?.textAlignment = .center
         
         
         setEtaTitle()
     }
-    
-    
     
     public func setEtaTitle() {
         
@@ -110,15 +116,23 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         }
         
         guard let transportType = self.transportType else {return}
-        let directionsMode = getLaunchOptionsMode(transportType: UInt32(transportType.rawValue))
+        let directionsMode = transportType.getMKLaunchString()
         destinationMapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: directionsMode])
     }
     
     
-    func getLaunchOptionsMode(transportType: UInt32) -> String {
-        switch transportType {
-            case 1:
-                return MKLaunchOptionsDirectionsModeDriving
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension MKDirectionsTransportType {
+    
+    func getMKLaunchString() -> String {
+        switch self.rawValue {
+        case 1:
+            return MKLaunchOptionsDirectionsModeDriving
         case 2:
             return MKLaunchOptionsDirectionsModeWalking
         case 4:
@@ -136,8 +150,25 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         }
     }
     
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func getImage() -> UIImage? {
+        switch self.rawValue {
+        case 1:
+            return UIImage(named: "automobile")
+        case 2:
+            return UIImage(named: "Walking")
+        case 4:
+            if #available(iOS 9.0, *) {
+                return UIImage(named: "transit")
+            } else {
+                return UIImage(named: "automobile")
+            }
+        default:
+            if #available(iOS 10.0, *) {
+                return UIImage(named: "automobile")
+            } else {
+                return UIImage(named: "automobile")
+            }
+        }
     }
 }
 

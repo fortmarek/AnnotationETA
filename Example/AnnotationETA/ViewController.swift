@@ -62,19 +62,30 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             
             let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotation")
             annotationEtaView.pinColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
+    
+            annotationEtaView.rightButton?.addTarget(self, action: #selector(detailButtonTapped), for: .touchUpInside)
+        
             annotationView = annotationEtaView
+
         }
         
         return annotationView
     }
     
+    func detailButtonTapped() {
+//        guard let detailViewController = self.detailViewController else {return}
+//        
+//        viewController.navigationController?.navigationBar.tintColor = Colors.pumpkinColor
+//        viewController.toilet = toilet
+//        
+//        ShowDelegate.showViewController(viewController: viewController)
+        
+    }
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let annotation = view.annotation else {return}
         
-        view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .automobile, destinationName: annotation.title ?? "")
-        
-        
-        
+        view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .walking, destinationName: annotation.title ?? "")
     }
 }
 

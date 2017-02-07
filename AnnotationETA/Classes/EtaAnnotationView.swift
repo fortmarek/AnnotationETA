@@ -13,6 +13,7 @@ open class EtaAnnotationView: MKAnnotationView {
     
     open var pinColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
     open var pinSecondaryColor = UIColor.white
+    open var rightButton: UIButton?
     
     public override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
@@ -58,8 +59,8 @@ open class EtaAnnotationView: MKAnnotationView {
     
     public func setDetailShowButton() {
         //Detailed toilet info button
-        let rightButton = UIButton.init(type: .detailDisclosure)
-        rightButton.tintColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
+        rightButton = UIButton.init(type: .detailDisclosure)
+        rightButton?.tintColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
         //rightButton.addTarget(self, action: #selector(detailButtonTapped), for: .touchUpInside)
         rightCalloutAccessoryView = rightButton
         
