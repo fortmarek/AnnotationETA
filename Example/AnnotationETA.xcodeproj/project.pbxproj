@@ -17,6 +17,7 @@
 		A78DA16B647057878F2ACD21 /* Pods_AnnotationETA_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6E3A28D09A7E19103A8C6B /* Pods_AnnotationETA_Example.framework */; };
 		F8641C0A1E4A13B9009C9DF1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8641C091E4A13B9009C9DF1 /* DetailViewController.swift */; };
 		F89C98401E4287FE0055078B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89C983F1E4287FE0055078B /* MapKit.framework */; };
+		F8ACECB31E4A7D09009C4A5B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89C983F1E4287FE0055078B /* MapKit.framework */; };
 		F8D9CF531E4A7A8A000BCFB8 /* AnnotationETA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D9CF4A1E4A7A8A000BCFB8 /* AnnotationETA.framework */; };
 		F8D9CF5A1E4A7A8A000BCFB8 /* AnnotationETATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9CF591E4A7A8A000BCFB8 /* AnnotationETATests.swift */; };
 		F8D9CF5C1E4A7A8A000BCFB8 /* AnnotationETA.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D9CF4C1E4A7A8A000BCFB8 /* AnnotationETA.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -132,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8ACECB31E4A7D09009C4A5B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
