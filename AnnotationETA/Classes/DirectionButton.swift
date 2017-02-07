@@ -18,6 +18,8 @@ open class DirectionButton: UIButton, DirectionsDelegate {
     var transportType: MKDirectionsTransportType?
     var destinationName: String?
     
+    var imageWidth = CGFloat(0)
+    
     public init(destinationCoordinate: CLLocationCoordinate2D, locationManager: CLLocationManager, transportType: MKDirectionsTransportType?, destinationName: String?) {
         self.destinationCoordinate = destinationCoordinate
         self.transportType = transportType
@@ -40,9 +42,9 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         setImage(image, for: .highlighted)
         
         
-        let imageWidth = image.size.width
-        
-        //Center image in view, 22 is for image width
+        imageWidth = image.size.width
+        print(imageWidth)
+        //Center image in view
         let leftImageInset = (frame.size.width - imageWidth) / 2
         imageEdgeInsets = UIEdgeInsets(top: 0, left: leftImageInset, bottom: 0, right: leftImageInset)
         
@@ -54,9 +56,7 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         setEtaTitle()
     }
     
-    public func setEtaTitle() {
-        
-        
+    private func setEtaTitle() {
         
         getEta(completion: {eta in
             
@@ -74,7 +74,7 @@ open class DirectionButton: UIButton, DirectionsDelegate {
     }
     
     //Animating appearance of ETA title
-    fileprivate func animateETA() {
+    private func animateETA() {
         
         //Start with label rotated upside down to then rotate it to the right angle
         titleLabel?.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI / 2), 1, 0, 0)
@@ -87,7 +87,7 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         
         //Image position after adding title
         //Center image in view, 22 is for image width
-        let leftImageInset = (frame.size.width - 22) / 2
+        let leftImageInset = (frame.size.width - imageWidth) / 2
         imageEdgeInsets = UIEdgeInsets(top: 0, left: leftImageInset, bottom: 10, right: leftImageInset)
         
         UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions(), animations: {
@@ -129,7 +129,7 @@ open class DirectionButton: UIButton, DirectionsDelegate {
 
 extension MKDirectionsTransportType {
     
-    func getMKLaunchString() -> String {
+    fileprivate func getMKLaunchString() -> String {
         switch self.rawValue {
         case 1:
             return MKLaunchOptionsDirectionsModeDriving
@@ -150,7 +150,7 @@ extension MKDirectionsTransportType {
         }
     }
     
-    func getImage() -> UIImage? {
+    fileprivate func getImage() -> UIImage? {
         switch self.rawValue {
         case 1:
             return UIImage(named: "automobile")

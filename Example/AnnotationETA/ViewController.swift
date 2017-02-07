@@ -85,7 +85,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let annotation = view.annotation else {return}
         
-        view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .walking, destinationName: annotation.title ?? "")
+        if #available(iOS 9.0, *) {
+            view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .transit, destinationName: annotation.title ?? "")
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }
 
