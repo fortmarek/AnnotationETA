@@ -62,24 +62,26 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             
             let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotation")
             annotationEtaView.pinColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
-    
+            
+            annotationEtaView.setDetailShowButton()
             annotationEtaView.rightButton?.addTarget(self, action: #selector(detailButtonTapped), for: .touchUpInside)
         
             annotationView = annotationEtaView
-
         }
         
         return annotationView
     }
     
     func detailButtonTapped() {
-        guard let detailViewController = self.detailViewController else {return}
         
-        viewController.navigationController?.navigationBar.tintColor = Colors.pumpkinColor
-        viewController.toilet = toilet
+        guard
+            mapView.selectedAnnotations.count == 1,
+            let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController
+        else {return}
         
-        ShowDelegate.showViewController(viewController: viewController)
+        detailViewController.annotation = mapView.selectedAnnotations[0]
         
+        self.present(detailViewController, animated: true, completion: nil)
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {

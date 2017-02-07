@@ -41,10 +41,8 @@ open class DirectionButton: UIButton, DirectionsDelegate {
         setImage(image, for: UIControlState())
         setImage(image, for: .highlighted)
         
-        
-        imageWidth = image.size.width
-        print(imageWidth)
         //Center image in view
+        imageWidth = image.size.width
         let leftImageInset = (frame.size.width - imageWidth) / 2
         imageEdgeInsets = UIEdgeInsets(top: 0, left: leftImageInset, bottom: 0, right: leftImageInset)
         

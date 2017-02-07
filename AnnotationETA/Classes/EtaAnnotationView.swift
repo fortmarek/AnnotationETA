@@ -61,7 +61,7 @@ open class EtaAnnotationView: MKAnnotationView {
         //Detailed toilet info button
         rightButton = UIButton.init(type: .detailDisclosure)
         rightButton?.tintColor = UIColor(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.0)
-        //rightButton.addTarget(self, action: #selector(detailButtonTapped), for: .touchUpInside)
+        
         rightCalloutAccessoryView = rightButton
         
 

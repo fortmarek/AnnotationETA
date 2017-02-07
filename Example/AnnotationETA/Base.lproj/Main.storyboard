@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-8E-Zop">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,6 +34,7 @@
                             <constraint firstItem="rrb-8E-Zop" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="uzt-mR-1bC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="J86-CM-rBI"/>
                     <connections>
                         <outlet property="mapView" destination="rrb-8E-Zop" id="4Qk-7m-4Fb"/>
                     </connections>
@@ -45,7 +46,7 @@
         <!--Detail View Controller-->
         <scene sceneID="Dmd-7s-dik">
             <objects>
-                <viewController id="Mqt-VL-dGZ" customClass="DetailViewController" customModule="AnnotationETA_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" id="Mqt-VL-dGZ" customClass="DetailViewController" customModule="AnnotationETA_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vau-eW-mek"/>
                         <viewControllerLayoutGuide type="bottom" id="v0a-wV-C4M"/>
@@ -72,13 +73,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueU-He-kjY">
+                                <rect key="frame" x="170" y="346" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="dimissDetail:" destination="Mqt-VL-dGZ" eventType="touchUpInside" id="1e0-E1-Ihk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ueU-He-kjY" firstAttribute="centerX" secondItem="q5V-PH-P6B" secondAttribute="centerX" id="3Uc-2h-y5q"/>
                             <constraint firstItem="b54-AX-DBX" firstAttribute="top" secondItem="YUW-rb-xC4" secondAttribute="bottom" constant="35" id="8Me-Rx-kFU"/>
                             <constraint firstItem="Hne-sH-x9e" firstAttribute="top" secondItem="b54-AX-DBX" secondAttribute="bottom" constant="35" id="CX8-Ho-AKp"/>
                             <constraint firstItem="b54-AX-DBX" firstAttribute="centerX" secondItem="q5V-PH-P6B" secondAttribute="centerX" id="NuT-d3-5Td"/>
                             <constraint firstItem="Hne-sH-x9e" firstAttribute="centerX" secondItem="q5V-PH-P6B" secondAttribute="centerX" id="YBB-I4-gkz"/>
+                            <constraint firstItem="ueU-He-kjY" firstAttribute="top" secondItem="Hne-sH-x9e" secondAttribute="bottom" constant="126" id="dpR-eJ-kmi"/>
                             <constraint firstItem="YUW-rb-xC4" firstAttribute="top" secondItem="Vau-eW-mek" secondAttribute="bottom" constant="67" id="m0b-rn-ukU"/>
                             <constraint firstItem="YUW-rb-xC4" firstAttribute="centerX" secondItem="q5V-PH-P6B" secondAttribute="centerX" id="ufI-ra-ARU"/>
                         </constraints>
