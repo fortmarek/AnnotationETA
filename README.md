@@ -29,8 +29,7 @@ Include all the files under Pod/Classes into your project.
 
 ## Set Up
 
-In ```swift
-func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation)``` set your `MKAnnotationView` to `AnnotationEtaView`:
+In `func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation)` set your `MKAnnotationView` to `AnnotationEtaView`:
 ```swift 
 let annotationEtaView = EtaAnnotationView(annotation: annotation, reuseIdentifier: "etaAnnotationIdentifier")
 annotationView = annotationEtaView
@@ -43,7 +42,7 @@ func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
 guard let annotation = view.annotation else {return}
 if annotation is MKUserLocation {return}
 
-view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, transportType: .automobile, destinationName: annotation.title ?? "")
+view.leftCalloutAccessoryView = DirectionButton(destinationCoordinate: annotation.coordinate, locationManager: self.locationManager, \ntransportType: .automobile, destinationName: annotation.title ?? "")
 }
 ```
 
