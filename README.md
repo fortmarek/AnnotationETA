@@ -28,6 +28,14 @@ it, simply add the following line to your Podfile:
 pod "AnnotationETA"
 ```
 
+### Carthage
+
+To integrate AnnotationETA into your Xcode project using Carthage, specify it in your Cartfile:
+
+```ruby
+github "fortmarek/AnnotationETA"
+```
+
 ### Manually
 
 Include all the files under AnnotationETA/Classes into your project.
