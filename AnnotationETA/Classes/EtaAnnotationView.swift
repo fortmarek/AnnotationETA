@@ -20,7 +20,7 @@ open class EtaAnnotationView: MKAnnotationView {
         
         self.annotation = annotation
         self.canShowCallout = true
-        self.frame = CGRect(origin: self.frame.origin, size: CGSize(width: 20, height: 30))
+        self.frame = CGRect(origin: self.frame.origin, size: CGSize(width: 29, height: 43))
         //Bottom part of the pin is on the location, not the center, offset needed
         self.centerOffset = CGPoint(x: 0, y: -(self.frame.height)/2)
         self.backgroundColor = UIColor.clear
@@ -45,10 +45,10 @@ open class EtaAnnotationView: MKAnnotationView {
         
         //Bottom part of the pin with arc
         let bottomPath = UIBezierPath()
-        bottomPath.move(to: CGPoint(x: 0, y: bigCircleRect.size.height/2 + 1.5))
-        bottomPath.addLine(to: CGPoint(x: self.frame.width, y: bigCircleRect.size.height/2 + 1.5))
+        bottomPath.move(to: CGPoint(x: 0, y: bigCircleRect.size.height/2 + 2.5))
+        bottomPath.addLine(to: CGPoint(x: self.frame.width, y: bigCircleRect.size.height/2 + 2.5))
         bottomPath.addArc(withCenter: CGPoint(x: self.frame.width/2, y: self.frame.height - 2), radius: 2, startAngle: CGFloat(0), endAngle: CGFloat(M_PI), clockwise: true)
-        bottomPath.addLine(to: CGPoint(x: 0, y: bigCircleRect.size.height/2 + 1.5))
+        bottomPath.addLine(to: CGPoint(x: 0, y: bigCircleRect.size.height/2 + 2.5))
         bottomPath.close()
         pinColor.setFill()
         bottomPath.fill()
